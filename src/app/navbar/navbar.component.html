@@ -1,0 +1,30 @@
+<form (submit) = "addUser(newUser)">
+    <input type='text' #newUser>
+    <button>
+        Send User
+    </button>
+</form>
+
+<ul>  
+    <app-user *ngFor="let user of users" [nameUser]= "user"></app-user>
+    <button (click) ="sayhello()">
+        click me!
+    </button>
+</ul>
+
+<div>
+    <form>
+        <input type='text' name='name'[(ngModel)] = 'name'>
+        <input type='text' name='age'[(ngModel)] = 'age'>
+    </form>
+
+    name: {{name}} <br>
+    age: {{age}}
+</div>
+
+<hr>
+
+<div *ngFor="let post of posts">
+    <h3>{{post.title}}</h3>
+    <p>{{post.body}}</p>
+</div>
